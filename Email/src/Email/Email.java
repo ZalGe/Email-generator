@@ -27,11 +27,9 @@ public class Email
 
         // Combine elements to generate email
         email = firsName.toLowerCase() + "." + lastName.toLowerCase() + "@" + position + "." + companySuffix;
-        System.out.println("Your email is: "+email);
 
         // Call for a method that returns generated password
         this.password = setPass(DefaultPasswordLenght);
-        System.out.println("Your password is: "+ this.password);
     }
 
     // Ask fo the position
@@ -42,7 +40,7 @@ public class Email
         if (posChoice == 1){ return "stu"; }
         else if (posChoice == 2) { return "tea"; }
         else if (posChoice == 3) { return "dir"; }
-        else {return "";}
+        else {return "guest";}
     }
     // Generate random password
     private String setPass(int lenght){
@@ -79,6 +77,7 @@ public class Email
     {
         return "DISPLAY NAME: " + firsName + " " + lastName +
                 "\nCOMPANY EMAIL: " + email +
+                "\nPASSWORD : " + password +
                 "\nMAILBOX CAPACITY: " + mailboxCapacity + " MB";
     }
 }
